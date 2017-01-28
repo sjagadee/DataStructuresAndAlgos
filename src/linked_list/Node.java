@@ -2,6 +2,8 @@ package linked_list;
 
 /**
  * Created by srinivas on 1/27/17.
+ *
+ * Basic Node class
  */
 public class Node {
     int data;
@@ -12,8 +14,12 @@ public class Node {
         this.next = null;
     }
 
+    public int getData() {
+        return this.data;
+    }
+
     @Override
     public String toString() {
-        return "Data: " + this.data;
+        return "" + this.data;
     }
 }
