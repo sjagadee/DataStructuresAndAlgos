@@ -76,7 +76,5 @@ public class DeleteMiddle {
         deleteMid(mid);
 
         list.printData();
-
-
     }
 }
