@@ -1,9 +1,9 @@
-package string_and_matrix;
+package string_arrays_matrix;
 
 /**
  * Created by srinivas on 1/25/17.
  *
- * Reverse a string_and_matrix in place
+ * Reverse a string_arrays_matrix in place
  *
  * Input: "find you will pain only go you recordings security the into if"
  * Output: "if into the security recordings you go only pain will you find"
@@ -11,8 +11,8 @@ package string_and_matrix;
  * The method I am following to do it
  * 1. reverse the whole String
  * 2. now we would have whole in reverse order
- * 3. the string_and_matrix would look like "fi otni eht sgnidrocer uoy og ylno niap lliw uoy dnif"
- * 4. finally we try to reverse each string_and_matrix, so it looks like the expected output
+ * 3. the string_arrays_matrix would look like "fi otni eht sgnidrocer uoy og ylno niap lliw uoy dnif"
+ * 4. finally we try to reverse each string_arrays_matrix, so it looks like the expected output
  *
  */
 public class StringReverseInPlace {
@@ -23,14 +23,14 @@ public class StringReverseInPlace {
         System.out.print(str + " -> " + reversedStr);
     }
 
-    // static method that performs string_and_matrix reverse
+    // static method that performs string_arrays_matrix reverse
     public static String stringReverseInPlace(String str) {
 
         char[] newChar = str.toCharArray();
         int first = 0;
         int last = newChar.length -1;
 
-        // first reverse which reverses the whole string_and_matrix
+        // first reverse which reverses the whole string_arrays_matrix
         strReverse(newChar, first, last);
 
         int curIndex = 0;
@@ -50,7 +50,7 @@ public class StringReverseInPlace {
         return new String(newChar);
     }
 
-    // private method that performs string_and_matrix reverse
+    // private method that performs string_arrays_matrix reverse
     private static void strReverse(char[] newChar, int first, int last) {
 
         while(first<last) {

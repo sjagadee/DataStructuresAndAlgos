@@ -1,4 +1,4 @@
-package string_and_matrix;
+package string_arrays_matrix;
 
 /**
  * Created by srinivas on 1/25/17.
@@ -19,7 +19,7 @@ public class PermutationsOfPalindrome {
      *
      * This calls other methods such as
      * getFrequencyNumberOfEachCharInString which computes frequency number,
-     * for each character in a given string_and_matrix
+     * for each character in a given string_arrays_matrix
      *
      * Then calls isMaxOneOddNumberInTable which checks if the frequency table has
      * only one odd value (palindrome can have maximum only one odd value)
@@ -49,7 +49,7 @@ public class PermutationsOfPalindrome {
     }
 
     /**
-     * This method calculates frequency of each character in the string_and_matrix and adds it to the frequency table
+     * This method calculates frequency of each character in the string_arrays_matrix and adds it to the frequency table
      *
      */
     private static int[] getFrequencyNumberOfEachCharInString(String str) {
@@ -93,9 +93,9 @@ public class PermutationsOfPalindrome {
         String str = "tato Cac";
         boolean solution = isPermutationsOfPalindrome(str);
         if (solution) {
-            System.out.println("String " + str + " has permutations of palindrome for the string_and_matrix");
+            System.out.println("String " + str + " has permutations of palindrome for the string_arrays_matrix");
         } else {
-            System.out.println("String " + str + " does not have permutations of palindrome for the string_and_matrix");
+            System.out.println("String " + str + " does not have permutations of palindrome for the string_arrays_matrix");
         }
     }
 }

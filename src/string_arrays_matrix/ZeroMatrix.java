@@ -1,4 +1,4 @@
-package string_and_matrix;
+package string_arrays_matrix;
 
 /**
  * Created by srinivas on 1/27/17.

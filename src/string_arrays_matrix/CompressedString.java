@@ -1,12 +1,12 @@
-package string_and_matrix;
+package string_arrays_matrix;
 
 /**
  * Created by srinivas on 1/26/17.
  *
- * Compressed String would return us back the smallest string_and_matrix
- * after the compression is complete, we check if the compressed string_and_matrix is smaller
- * if it is, then we return the compressed string_and_matrix,
- * otherwise we return the string_and_matrix which was passed
+ * Compressed String would return us back the smallest string_arrays_matrix
+ * after the compression is complete, we check if the compressed string_arrays_matrix is smaller
+ * if it is, then we return the compressed string_arrays_matrix,
+ * otherwise we return the string_arrays_matrix which was passed
  */
 public class CompressedString {
 
