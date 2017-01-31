@@ -13,6 +13,7 @@ package linked_list;
  * 5. printData
  * 6. getLength
  * 7. toString() - prints data
+ * 8. createIntersection
  */
 public class LinkedList {
 
@@ -25,7 +26,7 @@ public class LinkedList {
         this.head = newNode;
     }
 
-    // Insert at at the tail of the list
+    // Insert at at the tail of the list and return the added node
     public Node insertAtTail(int data) {
         Node newNode = new Node(data);
         Node temp = this.head;
@@ -38,7 +39,26 @@ public class LinkedList {
             }
             temp.next = newNode;
         }
-        return head;
+        return newNode;
+    }
+
+    // This method is a helper method to create intersection between two linked lists
+    public void createIntersection(LinkedList list, Node nodeToJoin, LinkedList listToJoin){
+
+        // This is list to which another list will intersect
+        Node listHead = list.head;
+        // Here we have the node where we would be joining the other list
+        while(listHead != nodeToJoin){
+            listHead = listHead.next;
+        }
+        // This is the second list which will be joining the above list
+        // This list would be traversed till the end
+        Node currNode = listToJoin.head;
+        while(currNode.next!=null){
+            currNode = currNode.next;
+        }
+        // the lists end is pointed to the node where it will join the other list
+        currNode.next = listHead;
     }
 
     // Delete an element a node
@@ -81,6 +101,7 @@ public class LinkedList {
     public Node getHead(){
         return this.head != null ? this.head : null;
     }
+
 
     // Print the data in the list
     public void printData() {
