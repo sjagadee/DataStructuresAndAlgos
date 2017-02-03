@@ -10,11 +10,11 @@ public class IsUnique {
 
     private static boolean isUnique(String str) {
 
-        if(str.length() > 127) {
+        if(str.length() > 128) {
             return false;
         }
 
-        boolean[] checkChar = new boolean[127];
+        boolean[] checkChar = new boolean[128];
         for(int i = 0; i < str.length(); i++) {
             // converts the value of the string to integer
             int val = str.charAt(i);
