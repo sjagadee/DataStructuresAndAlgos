@@ -47,11 +47,30 @@ public class CoinChangeProblem {
         return currentCount;
     }
 
+    private static int coinChangeBottomUp(int amtLeft, int[] dinominations) {
+        int[] resultArray = new int[amtLeft + 1];
+        resultArray[0] = 1;
+
+        for(int coin: dinominations) {
+            for(int higherAmount = coin; higherAmount < amtLeft + 1; higherAmount++) {
+                int higherAmountReference = higherAmount - coin;
+                resultArray[higherAmount] += resultArray[higherAmountReference];
+            }
+        }
+        return resultArray[amtLeft];
+
+    }
+
+
     public static void main(String[] args) {
         int amount = 5;
         int[] dinominations = new int[]{1,2, 3, 4};
         int result = coinChangeRecursive(amount, dinominations);
 
+        int newResult = coinChangeBottomUp(amount, dinominations);
+
         System.out.print(result);
+
+        System.out.println("Bottom Up approach:" + newResult);
     }
 }
