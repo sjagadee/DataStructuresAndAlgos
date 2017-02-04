@@ -2,8 +2,19 @@ package string_arrays_matrix;
 
 /**
  * Created by srinivas on 1/27/17.
+ *
+ * This would print the matrix in spiral order
+ *
+ * eg:
+ * 11 12 13 14
+ * 15 16 17 18
+ * 19 20 21 22
+ *
+ * is printed in
+ * 11 12 13 14 18 22 21 20 19 15 16 17
+ *
  */
-public class SprialOrderMatrixPrint {
+public class SpiralOrderMatrixPrint {
 
     public static void printMatrix(int[][] a, int col, int row) {
         int top = 0;

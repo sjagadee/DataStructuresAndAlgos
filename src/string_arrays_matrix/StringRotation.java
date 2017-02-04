@@ -2,6 +2,8 @@ package string_arrays_matrix;
 
 /**
  * Created by srinivas on 1/27/17.
+ *
+ * This class has a method that would check if the one string is a rotation of other
  */
 public class StringRotation {
 
