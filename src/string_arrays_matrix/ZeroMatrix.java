@@ -2,6 +2,8 @@ package string_arrays_matrix;
 
 /**
  * Created by srinivas on 1/27/17.
+ *
+ * This problem specifies that if we find any 0 element in the matrix then we set its row and column with zero element
  */
 public class ZeroMatrix {
 
