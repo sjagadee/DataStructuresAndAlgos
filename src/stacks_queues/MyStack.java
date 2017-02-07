@@ -33,7 +33,9 @@ public class MyStack<T> {
     }
 
     public T peek() {
-        if(top == null) throw new EmptyStackException();
+        if(top == null) {
+            return null;
+        }
         return top.data;
     }
 
