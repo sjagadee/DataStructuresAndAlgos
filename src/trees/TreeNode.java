@@ -5,9 +5,9 @@ package trees;
  */
 public class TreeNode {
 
-    private Integer data;
-    private TreeNode leftChild;
-    private TreeNode rightChild;
+    Integer data;
+    TreeNode leftChild;
+    TreeNode rightChild;
 
     public TreeNode(Integer data) {
         this.data = data;
