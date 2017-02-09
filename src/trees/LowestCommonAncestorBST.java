@@ -3,7 +3,7 @@ package trees;
 /**
  * Created by srinivas on 2/9/17.
  *
- * Lowest common ancestor of BST 
+ * Lowest common ancestor of BST
  */
 public class LowestCommonAncestorBST {
 
