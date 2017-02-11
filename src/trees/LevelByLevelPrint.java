@@ -1,15 +1,15 @@
 package trees;
 
-
 import sun.misc.Queue;
 
 /**
  * Created by srinivas on 2/10/17.
  *
- * Level print can be done using 2 queues
- * or also can be done using one queue and a delimiter
+ * Level by level print can be done in two ways
+ * 1. using 2 queues
+ * 2. using one queue and a delimiter
  */
-public class LevelPrint {
+public class LevelByLevelPrint {
 
     private static void levelPrintTwoQueues(TreeNode root) throws InterruptedException {
         Queue<TreeNode> q1 = new Queue<>();
