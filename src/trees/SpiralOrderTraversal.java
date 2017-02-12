@@ -7,9 +7,9 @@ import java.util.Stack;
 
 /**
  * Created by srinivas on 2/10/17.
- * <p>
+ *
  * using 2 stacks
- * using deque 
+ * using deque
  */
 public class SpiralOrderTraversal {
     private static void spiralOrderWithTwoStacks(TreeNode root) {
