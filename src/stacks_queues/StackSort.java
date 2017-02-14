@@ -1,5 +1,7 @@
 package stacks_queues;
 
+import java.util.Stack;
+
 /**
  * Created by srinivas on 2/7/17.
  *
@@ -30,24 +32,50 @@ public class StackSort {
         System.out.print(s1.peek() + " ");
         System.out.println();
 
-        while (!s1.isEmpty()) {
-            isMax(s1.pop());
-        }
+//        while (!s1.isEmpty()) {
+//            stackSortRecursive(s1.pop());
+//        }
+//
+//        while (!s2.isEmpty()) {
+//            System.out.print(s2.pop() + " ");
+//        }
 
-        while (!s2.isEmpty()) {
-            System.out.print(s2.pop() + " ");
+        MyStack<Integer> res = new MyStack<>();
+        System.out.println();
+        while (!s1.isEmpty()) {
+            res = stackSortIterative(s1);
+        }
+        while(!res.isEmpty()) {
+            System.out.print(res.pop() + " ");
         }
 
     }
 
-    public static void isMax(Integer data) {
+    public static MyStack<Integer> stackSortIterative(MyStack<Integer> stack) {
+        MyStack<Integer> newStack = new MyStack<>();
+        newStack.push(stack.pop());
+
+        while(!stack.isEmpty()) {
+            int temp = stack.pop();
+            while(!newStack.isEmpty() && temp > newStack.peek()) {
+                stack.push(newStack.pop());
+            }
+            newStack.push(temp);
+
+        }
+        return newStack;
+    }
+
+
+
+    public static void stackSortRecursive(Integer data) {
         Integer val = s2.peek();
         if(val == null) {
             s2.push(data);
         } else if( val < data) {
             val = s2.pop();
-            isMax(data);
-            isMax(val);
+            stackSortRecursive(data);
+            stackSortRecursive(val);
         } else {
             s2.push(data);
         }
