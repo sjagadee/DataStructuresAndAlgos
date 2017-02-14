@@ -32,27 +32,43 @@ public class StackSort {
         System.out.print(s1.peek() + " ");
         System.out.println();
 
-//        while (!s1.isEmpty()) {
-//            stackSortRecursive(s1.pop());
-//        }
-//
-//        while (!s2.isEmpty()) {
-//            System.out.print(s2.pop() + " ");
-//        }
+        Stack<Integer> stack = new Stack<>();
+        stack.push(2);
+        stack.push(10);
+        stack.push(45);
+        stack.push(6);
+        stack.push(18);
 
-        MyStack<Integer> res = new MyStack<>();
-        System.out.println();
         while (!s1.isEmpty()) {
-            res = stackSortIterative(s1);
+            stackSortRecursive(s1.pop());
         }
-        while(!res.isEmpty()) {
+
+        while (!s2.isEmpty()) {
+            System.out.print(s2.pop() + " ");
+        }
+
+        Stack<Integer> res = new Stack<>();
+        System.out.println();
+        while(!stack.isEmpty()) {
+            res = stackSortIterative(stack);
+        }
+
+        while(res == null || !res.isEmpty()) {
             System.out.print(res.pop() + " ");
         }
 
     }
 
-    public static MyStack<Integer> stackSortIterative(MyStack<Integer> stack) {
-        MyStack<Integer> newStack = new MyStack<>();
+    public static Stack<Integer> stackSortIterative(Stack<Integer> stack) {
+        
+//      I dont know why this is not working, if I use this check then
+//      control should not enter the condition, but it is entering.
+//      Hence I am checking it before passing stack
+//      if(stack == null || !stack.isEmpty()) {
+//          return stack;
+//      }
+
+        Stack<Integer> newStack = new Stack<>();
         newStack.push(stack.pop());
 
         while(!stack.isEmpty()) {
