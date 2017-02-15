@@ -60,7 +60,7 @@ public class StackSort {
     }
 
     public static Stack<Integer> stackSortIterative(Stack<Integer> stack) {
-        
+
 //      I dont know why this is not working, if I use this check then
 //      control should not enter the condition, but it is entering.
 //      Hence I am checking it before passing stack
