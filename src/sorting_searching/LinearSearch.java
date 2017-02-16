@@ -6,6 +6,7 @@ package sorting_searching;
  * Linear search
  */
 public class LinearSearch {
+
     public static int linearSearch(int[] array, int searchEle){
         for (int i =0; i< array.length; i ++) {
             if(array[i] == searchEle) {
