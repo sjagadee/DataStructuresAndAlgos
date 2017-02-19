@@ -24,6 +24,5 @@ public class LinearSearch {
         } else {
             System.out.print("Value not found");
         }
-
     }
 }
