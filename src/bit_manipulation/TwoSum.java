@@ -3,7 +3,7 @@ package bit_manipulation;
 /**
  * Created by srinivas on 2/18/17.
  *
- * Two sum without operator
+ * Two sum without any operator (no use of +, -, *, /)
  */
 public class TwoSum {
 
