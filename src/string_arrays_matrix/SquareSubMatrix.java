@@ -3,9 +3,9 @@ package string_arrays_matrix;
 /**
  * Created by srinivas on 2/24/17.
  */
-public class SqureSubMatrix {
+public class SquareSubMatrix {
 
-    public static int maxSqureSubMatrix(int[][] arr) {
+    public static int maxSquareSubMatrix(int[][] arr) {
         int x = arr.length;
         if(x == 0) {
             return 0;
@@ -33,7 +33,7 @@ public class SqureSubMatrix {
         int[][] arr = { {0, 1, 1, 1},
                         {1, 1, 1, 1},
                         {0, 1, 1, 1} };
-        int res = maxSqureSubMatrix(arr);
+        int res = maxSquareSubMatrix(arr);
         System.out.println(res);
     }
 

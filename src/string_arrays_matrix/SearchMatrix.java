@@ -5,21 +5,23 @@ package string_arrays_matrix;
  *
  * Search is done on row wise and column wise sorted matrix
  *
- *
  */
 public class SearchMatrix {
 
-    public static Matrix search(int[][] a, int n, int x) {
+    public static Matrix search(int[][] a, int length, int searchVal) {
         int i = 0;
-        int j = n-1;
-        while (i < n && j >= 0) {
-            if(a[i][j] == x) {
+        int j = length-1;
+        while (i < length && j >= 0) {
+            if(a[i][j] == searchVal) {
                 Matrix matrix  = new Matrix(i, j);
                 return matrix;
             }
-            if(a[i][j] > x) {
+            // if the search element is less than that of current element move left
+            if(a[i][j] > searchVal) {
                 j--;
-            } else { // if(a[i][j] < x )
+            }
+            // if the search element is greater than that of current element move down
+            else { // if(a[i][j] < searchVal )
                 i++;
             }
         }
