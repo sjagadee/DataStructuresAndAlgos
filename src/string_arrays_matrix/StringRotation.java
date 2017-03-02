@@ -4,6 +4,8 @@ package string_arrays_matrix;
  * Created by srinivas on 1/27/17.
  *
  * This class has a method that would check if the one string is a rotation of other
+ *
+ *
  */
 public class StringRotation {
 
@@ -11,7 +13,7 @@ public class StringRotation {
         int length = str1.length();
 
         if(length > 0 && length == str2.length()) {
-            String newStr = str1 + str2;
+            String newStr = str1 + str1;
             return isSubString(newStr, str2);
         }
         return false;
@@ -23,7 +25,7 @@ public class StringRotation {
 
     public static void main(String[] args) {
         String str1 = "Helloworld";
-        String str2 = "oworldhll";
+        String str2 = "oworldhell";
 
         boolean result = isRotation(str1, str2);
 

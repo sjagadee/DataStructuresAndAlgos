@@ -1,9 +1,11 @@
 package string_arrays_matrix;
 
-import java.util.Arrays;
-
 /**
  * Created by srinivas on 2/3/17.
+ *
+ * This problem would set the string with %20 at places where there are space in the string
+ * Eg: You are Awesome
+ *  -> You%20are%20Awesome
  */
 public class UrlifyString {
 
