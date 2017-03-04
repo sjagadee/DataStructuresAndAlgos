@@ -21,6 +21,8 @@ public class MaximumSubArray {
         return max;
     }
 
+
+    // kadane's algorithm implementation
     public static int maxSubArrayDy(int[] arr) {
         int max_cur = arr[0];
         int max_global = arr[0];

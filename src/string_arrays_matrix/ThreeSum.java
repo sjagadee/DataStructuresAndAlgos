@@ -5,9 +5,38 @@ import java.util.Arrays;
 
 /**
  * Created by srinivas on 2/13/17.
+ *
+ * this is a kind of a problem which actually takes in 3 numbers in the array and
+ * would sum up to be 0
+ *
+ * ex {-2 -1, 3} = 0
+ * {9, -8, -1} = 0
  */
 public class ThreeSum {
 
+    // this would take O(n^3) time complexity
+    private static ArrayList<int[]> threeSumBruteForce(int[] arr) {
+        ArrayList<int[]> list = new ArrayList<>();
+        Arrays.sort(arr);
+        for(int i = 0; i < arr.length -3; i++) {
+            if(i ==0 || arr[i-1] < arr[i]) {
+                for (int j = i+1; j < arr.length -1; j++) {
+                    if(j == i+1 || arr[j-1] < arr[j]) {
+                        for (int k = j+1; k < arr.length; k++) {
+                            if(k == j+1 || arr[k-1] < arr[k]) {
+                                if(arr[i] + arr[j] + arr[k] == 0) {
+                                    list.add(new int[]{arr[i], arr[j], arr[k]});
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return list;
+    }
+
+    // this solution runs in O(n^2) time complexity  - hence an efficient solution
     private static ArrayList<int[]> threeSum(int[] array) {
         ArrayList<int[]> list = new ArrayList<>();
         int start;
@@ -43,7 +72,7 @@ public class ThreeSum {
         int[] array = new int[]{1, 0, -1, -4, -1, 2};
         ArrayList<int[]> res = threeSum(array);
         for (int[] a : res) {
-            for (int i = 0; i < a.length; i++) {
+            for (int i : a) {
                 System.out.print(a[i] + " ");
             }
             System.out.println();
