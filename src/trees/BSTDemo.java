@@ -45,19 +45,19 @@ public class BSTDemo {
         return null;
     }
 
-    public static void inOrderTraversal(TreeNode root) {
+    public static void preOrderTraversal(TreeNode root) {
         if(root!= null) {
             System.out.print(root.data + " ");
-            inOrderTraversal(root.leftChild);
-            inOrderTraversal(root.rightChild);
+            preOrderTraversal(root.leftChild);
+            preOrderTraversal(root.rightChild);
         }
     }
 
-    public static void preOrderTraversal(TreeNode root) {
+    public static void inOrderTraversal(TreeNode root) {
         if(root!= null) {
-            preOrderTraversal(root.leftChild);
+            inOrderTraversal(root.leftChild);
             System.out.print(root.data + " ");
-            preOrderTraversal(root.rightChild);
+            inOrderTraversal(root.rightChild);
         }
     }
 
