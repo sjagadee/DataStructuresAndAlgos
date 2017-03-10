@@ -36,7 +36,6 @@ public class TreeToList {
         TreeNode aEnd = a.leftChild;
         TreeNode bEnd = b.leftChild;
 
-
         aEnd.rightChild = b;
         b.leftChild = aEnd;
 
@@ -60,10 +59,13 @@ public class TreeToList {
         bst.insert(root, 28);
         bst.insert(root, 42);
 
+        bst.preOrderTraversal(root);
+
+
         TreeNode n = treeToList(root);
 
         TreeNode temp = n;
-        while(temp != n.rightChild) {
+        while(temp.data != n.rightChild.data) {
             System.out.print(n.data + " ");
             n = n.rightChild;
         }
